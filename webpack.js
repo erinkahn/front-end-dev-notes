@@ -21,4 +21,5 @@
    
    // 5. run the build command to start:
        npm run build
+            // this will create a dist folder of your compiled file (main.js)
     
