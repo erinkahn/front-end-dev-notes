@@ -1,5 +1,6 @@
 // babel
-  // a node package transpiler tool for JavaScript
+  // a node package 
+  // transpiler tool for JavaScript
   // babeljs.io
 
 
@@ -31,7 +32,7 @@
 
         
         
-// if you want to provide a list of browsers you want to be supported, you create a new file:
+// optional -- if you want to provide a list of specific browsers you want to be supported, you create a new file:
    .browserlistrc
     // inside the file, you specify the target list of browsers or whatever else you want
-    // https://github.com/browserslist/browserslist - examples of target lists 
+      // https://github.com/browserslist/browserslist - examples
