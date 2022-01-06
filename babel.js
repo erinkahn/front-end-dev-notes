@@ -10,7 +10,8 @@
 
 
 // installation steps:
-  // 1. npm init  // (package.json created)
+  // 1. create package.json file and install babel
+        npm init  
         npm install @babel/cli @babel/preset-ev -save-dev
   
   // 2. this will create the .babelrc file:
