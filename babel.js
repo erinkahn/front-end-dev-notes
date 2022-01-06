@@ -32,7 +32,7 @@
 
         
         
-// optional -- if you want to provide a list of specific browsers you want to be supported, you create a new file:
+// optional -- we can specify the applications and versions we want Babel to make our code compatible with by creating a file:
    .browserlistrc
     // inside the file, you specify the target list of browsers or whatever else you want
       // https://github.com/browserslist/browserslist - examples
