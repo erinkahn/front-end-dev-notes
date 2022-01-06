@@ -11,7 +11,8 @@
     npm install --save-dev webpack webpack-cli
 
    // 3. make an entry point where the main bundle file will be
-      // the default entry point is index.js in a src folder, but cna be changed
+      // the default entry point is index.js in a src folder, but can be changed
+      // if there's no folder already, create a src folder and inside create a index.js file that is empty
   
    // 4. add scripts to package.json to watch webpack to look for updates to our files and rebuild if changes occur
       scripts": {
