@@ -14,17 +14,17 @@
         npm init  
         npm install @babel/cli @babel/preset-ev -save-dev
   
-  // 2. this will create the .babelrc file:
+  // 2. create the .babelrc file:
         // which says (transpile my code to support older browsers)
           {
             "presets": ["@babel/preset-env"]
           }
 
-  // 3. then you define the command inside package.json you will use to run babel on the project:
-        // src is where the code is we want to run babel on, d flag says where we want Babel to store the output, out - it will be stored in the out folder
+  // 3. then you define the command inside package.json which you will use to run babel on the project:
+        // src is where the code is we want to run babel on, d flag says where we want Babel to store the output, out - is the folder you create for the new transpiled file 
           "scripts" : {
             "build" : "babel src -d out"    
           }
 
   // 4. you can then run babel with the build command:
-        npm run build
+        npm run-script build
