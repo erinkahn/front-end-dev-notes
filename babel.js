@@ -28,3 +28,10 @@
 
   // 4. you can then run babel with the build command:
         npm run-script build
+
+        
+        
+// if you want to provide a list of browsers you want to be supported, you create a new file:
+   .browserlistrc
+    // inside the file, you specify the target list of browsers or whatever else you want
+    // https://github.com/browserslist/browserslist - examples of target lists 
