@@ -25,6 +25,28 @@
             // this will create a dist folder of your compiled file (main.js)
     
        
+// example of finished package.json file:
+   {
+      "name": "package-name-here",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --watch",
+        "start": "webpack serve --open"
+      },
+      "author": "erin",
+      "license": "ISC",
+      "devDependencies": {
+        "css-loader": "^6.5.1",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.65.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.7.2"
+      }
+    }
+
 
 // to set settings or configuration 
        // create a new file called webpack.config.js, then set the mode to dev
