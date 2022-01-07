@@ -37,7 +37,6 @@
 // to change the entry point & exit point   
        // note: if you change the entry point but don't change the exit point, it will always compile to an exit point of dist/main.js
        // go to webpack.config.js
-       // say you want to create an outpoint folder called built and inside that a file called fast.js, you would write:
         const path = require('path');
 
         module.exports = {
@@ -48,4 +47,21 @@
             },
             // ...
         }
+      // run the build command 
+        npm run build
+            // now you can see this creates an outpoint folder called built and inside that a file called fast.js
     
+        
+      // another example:
+          // you have a folder called 'uncooked' and a file inside called 'ingredients.js' - which is your entry point
+          // you want to change the output exit point to ./steamy/soup.js
+        const path = require('path');
+
+        module.exports = {
+            mode: 'development',
+            entry: './uncooked/ingredients.js',
+            output: {
+                filename: 'soup.js',
+                path: path.resolve(__dirname, 'steamy'),
+            },
+        }
