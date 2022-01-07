@@ -106,7 +106,6 @@
        // example: 
             // we define 'test' as '\.txt$\i ... so the rule will apply to .txt files
             // the type of '.txt' files are an asset
-            
             rules:
             [
                 {
