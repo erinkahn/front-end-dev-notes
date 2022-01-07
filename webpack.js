@@ -118,7 +118,7 @@
             // this replaces the h1 with the .txt file content
 
 
-// adding CSS
+// adding CSS to our build
     // css files need loaders to get bundled by webpack so instead of a 'type' attribute like the rules above,
     // we need a 'use' attribute for two loaders:
        css-loader               // takes the css out of the .css file and adds it to the JS code
@@ -141,3 +141,41 @@
         
     // open new terminal 
         npm run start
+        
+        
+// adding images to our build
+    // since images and fonts dont need a loader, you can use the 'type' attribute 
+    // inside of the rules array add your image types
+        rules: [
+            {
+              test: /\.(png|svg|jpg|jpeg|gif)$/i,
+              type: 'asset/resource'
+            }
+        ]
+
+    // then import images into the JS file
+        import Square from '../square.png';
+        const img = document.createElement('img');
+        img.src = Square;
+        const body = document.querySelector('body');
+        body.appendChild(img);
+
+    // run the commands to compile
+        npm run build 
+        
+    // in a new terminal
+        npm run start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
