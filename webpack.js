@@ -69,7 +69,6 @@
 
 // webpack-dev-server
     // lets you preview your code and update it as you make changes
-
     // to use it, install the tool:
         npm install --save-dev webpack-dev-server
    
@@ -92,7 +91,6 @@
         
 // webpack rules
    // tells webpack what to do with different file types like a .txt file for example
-        
    // inside webpack.config.js, you enter an array of rules
         module.exports = 
         {
@@ -105,7 +103,6 @@
    // a rule has a 'test' option defined as a regular expression 
    // a rule also has a 'type' option telling webpack what to do with the files that match the test
    // if a file matches that regular expression, then webpack will use the rule on that particular file
-
        // example: 
             // we define 'test' as '\.txt$\i ... so the rule will apply to .txt files
             // the type of '.txt' files are an asset
@@ -117,7 +114,6 @@
                     type: 'asset/source'
                 }
             ]
-
     // once we add a rule for a file type, we can import files of that type into our code
         import Text from './example.txt';
         document.querySelector('h1').innerHTML = Text;
