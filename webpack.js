@@ -14,7 +14,14 @@
       // the default entry point is index.js in a src folder, but can be changed inside the webpack.config.js file (see below)
       // if there's no folder already, create a src folder and inside create a index.js file that is empty
       // after changes are made and files are saved, the files inside src will now compile to a dist folder dist/main.js
+      // if you have multiple js files, you need to export the functions inside each of them and import them in the main.js file like so:
+        // game.js (at the bottom)
+            export {getChoices, getChoices, getOutcome}; // exporting the functions
+       
+        // main.js (at the top)
+            import {getChoices, getComputerChoice, getOutcome} from './game.js';
   
+
    // 4. add scripts to package.json to watch webpack to look for updates to our files and rebuild if changes occur
       scripts": {
         "build": "webpack --watch",
@@ -24,6 +31,7 @@
        npm run build
             // this will create a dist folder of your compiled file (main.js)
     
+       
        
 // example of finished package.json file:
    {
@@ -46,6 +54,7 @@
         "webpack-dev-server": "^4.7.2"
       }
     }
+
 
 
 // to set settings or configuration 
@@ -146,7 +155,10 @@
 
 
 // adding CSS to our build
-    // we can use import CSS in out js with webpack so you can get rid of the link in the head tag of the html
+    // we can use import CSS in our main.js file using webpack so you can get rid of the style link in the head tag of index.html
+    // in your main.js file import the css file there for it to be compiled later in the JS
+        // note - index.html needs to have <script src="main.js"></script> for it to compile correctly
+
     // css files need loaders to get bundled by webpack so instead of a 'type' attribute like the rules above,
     // we need a 'use' attribute for two loaders:
        css-loader               // takes the css out of the .css file and adds it to the JS code
@@ -260,7 +272,3 @@
             ]
           }
         }
-
-
-
-
