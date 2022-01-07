@@ -51,22 +51,23 @@
 
     // add rules in the config file for CSS, fonts, and images
     // We will be using .css for our CSS, .woff and .woff2 file types for our fonts, and .png for our images.
-        rules: 
-        [
-            {
-                test: '/\.css$/i',
-                use: ['style-loader, css-loader']
-            },
-            {
-                test: '/\(.woff|.woff2)$/i',
-                type: 'asset/resource'
-            },
-            {
-                test: '/\.png$/',
-                type: 'asset/resource'
-            }
-        ]
-
+        module: {
+            rules: 
+            [
+                {
+                    test: '/\.css$/i',
+                    use: ['style-loader, css-loader']
+                },
+                {
+                    test: '/\(.woff|.woff2)$/i',
+                    type: 'asset/resource'
+                },
+                {
+                    test: '/\.png$/',
+                    type: 'asset/resource'
+                }
+            ]
+        }
           
           
 // Part 3 - Bundling the CSS
