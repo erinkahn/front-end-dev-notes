@@ -83,6 +83,8 @@
     // the build command compiles as it updates changes
     // the serve command serves the build and refreshes when changes are made
 
-    // then run the build command and the start command
+    // then run the build command
         npm run build  // (bundle)
+        
+    // open a new terminal tab and run the start command 
         npm run start  // (serve)
