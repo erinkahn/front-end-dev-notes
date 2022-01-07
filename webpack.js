@@ -74,7 +74,7 @@
         npm install --save-dev webpack-dev-server
    
     // create a script link to your exit point inside the HTML file
-        // <script src="./dist/main.js"></script>
+        script -> // <script src="./dist/main.js"></script>
 
     // then in package.json, add a start command inside the scripts 
         "build": "webpack --watch",
@@ -88,3 +88,39 @@
         
     // open a new terminal tab and run the start command 
         npm run start  // (serve)
+        
+        
+// webpack rules
+   // tells webpack what to do with different file types like a .txt file for example
+        
+   // inside webpack.config.js, you enter an array of rules
+        module.exports = 
+        {
+            module: 
+            {
+                rules: []
+            }
+        }
+        
+   // a rule has a 'test' option defined as a regular expression 
+   // a rule also has a 'type' option telling webpack what to do with the files that match the test
+   // if a file matches that regular expression, then webpack will use the rule on that particular file
+
+       // example: 
+            // we define 'test' as '\.txt$\i ... so the rule will apply to .txt files
+            // the type of '.txt' files are an asset
+            
+            rules:
+            [
+                {
+                    test: /\.txt$/i,
+                    type: 'asset/source'
+                }
+            ]
+
+    // once we add a rule for a file type, we can import files of that type into our code
+        import Text from './example.txt';
+        document.querySelector('h1').innerHTML = Text;
+            // this replaces the h1 with the .txt file content
+        
+        
