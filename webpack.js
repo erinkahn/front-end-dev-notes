@@ -116,5 +116,22 @@
         import Text from './example.txt';
         document.querySelector('h1').innerHTML = Text;
             // this replaces the h1 with the .txt file content
-        
-        
+
+
+// adding CSS
+    // css files need loaders to get bundled by webpack so instead of a 'type' attribute like the rules above,
+    // we need a 'use' attribute for two loaders:
+       css-loader               // takes the css out of the .css file and adds it to the JS code
+       style-loader.css-loader  // takes the output of css-loader and puts it in a style tag in the HTML
+    
+    // so, inside of the rules array you add:
+        {
+            test: /\.css$/i,
+            use: ['style-loader','css-loader']
+        }
+
+    // then sintall the loaders as dev dependencies
+        npm install --save-dev style-loader css-loader
+
+    // then import CSS files into your JS file
+        import './style.css';
