@@ -65,3 +65,24 @@
                 path: path.resolve(__dirname, 'steamy'),
             },
         }
+
+
+// webpack-dev-server
+    // lets you preview your code and update it as you make changes
+
+    // to use it, install the tool:
+        npm install --save-dev webpack-dev-server
+   
+    // create a script link to your exit point inside the HTML file
+        <script src="./dist/main.js"></script>
+
+    // then in package.json, add a start command inside the scripts 
+        "build": "webpack --watch",
+        "start": "webpack serve"
+    
+    // the build command compiles as it updates changes
+    // the serve command serves the build and refreshes when changes are made
+
+    // then run the build command and the start command
+        npm run build  // (bundle)
+        npm run start  // (serve)
