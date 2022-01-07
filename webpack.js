@@ -91,7 +91,7 @@
         
 // webpack rules
    // tells webpack what to do with different file types like a .txt file for example
-   // inside webpack.config.js, you enter an array of rules
+   // inside webpack.config.js, create a new module and inside, enter an array of rules
         module.exports = 
         {
             module: 
