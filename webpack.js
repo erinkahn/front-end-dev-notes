@@ -146,6 +146,7 @@
 
 
 // adding CSS to our build
+    // we can use import CSS in out js with webpack so you can get rid of the link in the head tag of the html
     // css files need loaders to get bundled by webpack so instead of a 'type' attribute like the rules above,
     // we need a 'use' attribute for two loaders:
        css-loader               // takes the css out of the .css file and adds it to the JS code
