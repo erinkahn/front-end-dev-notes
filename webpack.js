@@ -135,3 +135,9 @@
 
     // then import CSS files into your JS file
         import './style.css';
+
+    // apply the styles on command
+        npm run build
+        
+    // open new terminal 
+        npm run start
