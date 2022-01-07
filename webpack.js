@@ -74,7 +74,7 @@
         npm install --save-dev webpack-dev-server
    
     // create a script link to your exit point inside the HTML file
-        <script src="./dist/main.js"></script>
+        // <script src="./dist/main.js"></script>
 
     // then in package.json, add a start command inside the scripts 
         "build": "webpack --watch",
