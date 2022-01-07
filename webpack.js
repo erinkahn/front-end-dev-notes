@@ -24,6 +24,7 @@
        npm run build
             // this will create a dist folder of your compiled file (main.js)
     
+       
 
 // to set settings or configuration 
        // create a new file called webpack.config.js, then set the mode to dev
@@ -33,6 +34,7 @@
        // if you check the compiled file dist/main.js, you'll see notes explaining what's happening. 
        // they will be removed when the mode is set to 'production'
         
+
 
 // to change the entry point & exit point   
        // note: if you change the entry point but don't change the exit point, it will always compile to an exit point of dist/main.js
@@ -67,6 +69,7 @@
         }
 
 
+
 // webpack-dev-server
     // lets you preview your code and update it as you make changes
     // to use it, install the tool:
@@ -87,6 +90,7 @@
         
     // open a new terminal tab and run the start command 
         npm run start  // (serve)
+        
         
         
 // webpack rules
@@ -118,19 +122,20 @@
             // this replaces the h1 with the .txt file content
 
 
+
 // adding CSS to our build
     // css files need loaders to get bundled by webpack so instead of a 'type' attribute like the rules above,
     // we need a 'use' attribute for two loaders:
        css-loader               // takes the css out of the .css file and adds it to the JS code
        style-loader.css-loader  // takes the output of css-loader and puts it in a style tag in the HTML
     
-    // so, inside of the rules array you add:
+    // so, inside of webpack.config.js and inside the rules array you add:
         {
             test: /\.css$/i,
             use: ['style-loader','css-loader']
         }
 
-    // then sintall the loaders as dev dependencies
+    // then install the loaders as dev dependencies
         npm install --save-dev style-loader css-loader
 
     // then import CSS files into your JS file
@@ -141,11 +146,12 @@
         
     // open new terminal 
         npm run start
+     
         
         
 // adding images to our build
-    // since images and fonts dont need a loader, you can use the 'type' attribute 
-    // inside of the rules array add your image types
+    // since images and fonts dont need a loader, you can use the 'type' attribute with 'asset/resource' as the value
+    // inside of webpack.config.js and inside of the rules array add your image types
         rules: [
             {
               test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -167,10 +173,31 @@
         npm run start
 
 
+// adding fonts to our build
+    // the font rule is the same as the image rule which is type: 'asset/resource'
+    // inside webpack.config.js and inside the rules array you add:
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/i,
+          type: 'asset/resource'
+        }
 
+    // if its only 1 font you would write 
+        {
+          test: /\.ttf$/i,
+          type: 'asset/resource'
+        }
 
+    // import the font files inside our CSS file
+        @font-face {
+          font-family: 'Roboto-Black';
+          src: url('../Roboto-Black.ttf'); // The url is the location of the font file. 
+        }
 
-
+    // run the commands
+        npm run build
+        
+    // new terminal
+        npm run start
 
 
 
