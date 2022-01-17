@@ -62,10 +62,24 @@
   // Only are visible when keyboard users interact with the page
   <body>
       <div id="skip">
-        <a href="#maincontent" class="sr-only">Skip to main content</a>
+        <a href="#maincontent">Skip to main content</a>
       </div>
   //....
-  <main id="maincontent">
+     
+     // add styles to hide it off screen but not from screen readers: 
+     #skip a {
+         position:absolute;
+         left:-10000px;
+         top:auto;
+         width:1px;
+         height:1px;
+         overflow:hidden;
+      }
+      #skip a:focus {
+         position:static;
+         width:auto;
+         height:auto;
+      }
 
   
   
