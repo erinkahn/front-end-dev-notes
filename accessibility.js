@@ -3,21 +3,24 @@
 
 // ARIA landmarks identify regions of a page
    <body>
-       <header>
-          <nav role="navigation>
-              <ul><li><a></a></li></ul>
-          </nav>
-       </header>
+      <div id="skip"><a href="#maincontent" class="sr-only">Skip to main content</a></div>
+         <div id="root">   
+             <header>
+                <nav role="navigation>
+                    <ul><li><a></a></li></ul>
+                </nav>
+             </header>
 
-      <hero role="banner"></hero>
+            <div class="hero" role="banner"></div>
 
-      <main id="maincontent">
-        <div role="region" arial-label="Section Title"></div>
-        <div role="region" arial-label="Section Title"></div>
-        <div role="region" arial-label="Section Title"></div>
-     </main>
+            <main id="maincontent">
+              <div role="region" arial-label="Section Title"></div>
+              <div role="region" arial-label="Section Title"></div>
+              <div role="region" arial-label="Section Title"></div>
+           </main>
 
-     <footer role="contentinfo"></footer>
+           <footer role="contentinfo"></footer>
+      </div>
   </body>
 
 
