@@ -75,8 +75,39 @@ PHP, JavaScript, Java, Python, C++
   // Class that allows subclasses/child classes to inherit from itself 
   
   
-  
-  
+// SCOPES
+   // - Function scope   (var, regular functions)
+   // - Block scope 	 (inside { }, let, const, arrow functions)
+
+
+// THIS keyword
+   // - Regular function, the value of THIS depends on where it is CALLED
+   // - Arrow function, the value of THIS depends on where it is DEFINED
+
+
+// Function Methods:
+   // - These are used to set the this keyword independent of how the function is called
+    // 1. call - sets this inside the function and immediately calls that function, accepts comma separated values
+    // 2. apply - sets this inside the function and immediately calls that function, accepts and array of args 
+    // 3. bind - creates new copy/instance function and sets this to the parameter entered inside the call function ()
+ 
+ 
+// Array methods:
+   // 1. Map - creates new array from an existing one by applying a function to each element of the first array
+   // 2. reduce - reduces an array of values down to just one value. To get the output value, it runs a reduce function on each element of the array.
+   // 3. filter - takes each element in an array and applies a conditional to it. If true, the element pushes to the output array. If false, the element does not get pushed to the output array
+
+
+// Literal notations (objects, arrays)
+   // - Curly brackets { } for object literals
+   // - Square brackets [ ] for array literals
+   // - String literals have 3 options: ‘ “ or ` (template strings - backticks)
+      // - backticks allow for ${string interpolation} (js expressions)
+
+
+Rest/Spread operator 
+1. Rest - restructuring …
+2. Spread - object/array literals  
   
   
   
