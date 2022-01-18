@@ -1,0 +1,83 @@
+// OOP - Object oriented programming
+	   // An object based model  (contains objects) with instances, characteristics (what), properties and behaviors (how)
+
+
+// Class - Blueprint / template for objects 
+	// - has a set of rules
+	// - has values
+	// - has functions/behaviors
+
+
+//Object - instance of a class
+	// - have behaviors, properties, values, characteristics 
+	// - a user can interact with an object, modify, add new characteristics 
+
+
+//example: 
+  // CAR 
+    // - Class : car model: Volkswagen (template)
+    // - Object: specific car: Limited (instance of class)
+    // - Characteristics: color: red (properties)
+    // - Behavior: how to start the car (key fob) (functions/methods/behaviors)
+
+
+// — in OOP, you can access, use and modify instances and their data, methods
+
+// — readable, maintainable, manageable 
+
+
+//OOP languages: 
+PHP, JavaScript, Java, Python, C++
+
+
+// 4 main features of OOP
+  // 1. Inheritance
+  // 2. Encapsulation
+  // 3. Polymorphism
+  // 4. Abstraction
+
+
+//Inheritance
+  // Object or class is created using the same properties/behaviors as it’s parent object/class
+  // helps with code reuse
+
+
+// Encapsulation
+  // Binding data into a single entity without revealing the details
+  // The functions / data / methods inside a class are hidden to the user
+    // - Hides data / restricts access
+    // - Binds data ( data and methods bound together as a class) 
+
+
+// Polymorphism
+  // Many shapes 
+  // Code / data / methods behave differently under different circumstances / contexts 
+    // - Run time/execution time  - early binding - dynamic (function implementation is decided at execution time)
+    // - compile time - late binding - static (function implementation is decided at compile time)
+
+
+// Abstraction
+  //Hiding inner details and showing only the solution
+    // (Cars - you only need to know how to turn on a car, not how the wires work)
+
+
+// Constructor (new)
+  // Methods with the same name as the class name
+    // - Initialize objects
+    MyClass myClassObject = new MyClass();
+
+
+// Subclass
+  // A class that inherits props from another class ( a child class)
+
+
+// Superclass
+  // Class that allows subclasses/child classes to inherit from itself 
+  
+  
+  
+  
+  
+  
+  
+  
