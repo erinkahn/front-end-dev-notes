@@ -1,5 +1,5 @@
 // OOP - Object oriented programming
-	   // An object based model  (contains objects) with instances, characteristics (what), properties and behaviors (how)
+	// An object based model  (contains objects) with instances, characteristics (what), properties and behaviors (how)
 
 
 // Class - Blueprint / template for objects 
@@ -27,7 +27,7 @@
 
 
 //OOP languages: 
-PHP, JavaScript, Java, Python, C++
+    // PHP, JavaScript, Java, Python, C++
 
 
 // 4 main features of OOP
@@ -73,8 +73,8 @@ PHP, JavaScript, Java, Python, C++
 
 // Superclass
   // Class that allows subclasses/child classes to inherit from itself 
-  
-  
+
+
 // SCOPES
    // - Function scope   (var, regular functions)
    // - Block scope 	 (inside { }, let, const, arrow functions)
@@ -90,8 +90,8 @@ PHP, JavaScript, Java, Python, C++
     // 1. call - sets this inside the function and immediately calls that function, accepts comma separated values
     // 2. apply - sets this inside the function and immediately calls that function, accepts and array of args 
     // 3. bind - creates new copy/instance function and sets this to the parameter entered inside the call function ()
- 
- 
+
+
 // Array methods:
    // 1. Map - creates new array from an existing one by applying a function to each element of the first array
    // 2. reduce - reduces an array of values down to just one value. To get the output value, it runs a reduce function on each element of the array.
@@ -108,7 +108,3 @@ PHP, JavaScript, Java, Python, C++
 // Rest/Spread operator 
    // 1. Rest - restructuring …
    // 2. Spread - object/array literals  
-  
-  
-  
-  
