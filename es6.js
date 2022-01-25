@@ -30,7 +30,27 @@
         // ** if you don't define a constructor, JS will create a default one for you
 
 
-// THIS
+// this
   // refers to the object it belongs to
   // https://programmingwithmosh.com/javascript/understanding-of-this-variable-in-javascript/
 
+
+// static
+  // properties that use the 'static' keyword, belongs to the class
+    // example: 
+      static staticMethod()
+
+
+// static, this & the constructor method:
+  // The fields that utilize this, belong to the object being instantiated.
+  // The methods that don’t utilize static belong to the object being instantiated, except for the constructor method.
+  // The fields that don’t utilize this belong to the class.
+  // The methods that utilize static belong to the class
+  // The method constructor is a special method that belongs to the class
+  // static methods/fields are attached directly to the class (the constructor method is also attached to the class). 
+  // A static method CANNOT access class instance fields
+  // A static method CAN access class static fields
+
+
+// continue here:
+https://programmingwithmosh.com/javascript/es6-classes-and-functional-components-in-under-30-minutes/#:~:text=Class%20properties%20vs%20objects%20properties%20%26%20methods
