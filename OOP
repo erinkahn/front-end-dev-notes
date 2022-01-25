@@ -105,9 +105,9 @@ PHP, JavaScript, Java, Python, C++
       // - backticks allow for ${string interpolation} (js expressions)
 
 
-Rest/Spread operator 
-1. Rest - restructuring …
-2. Spread - object/array literals  
+// Rest/Spread operator 
+   // 1. Rest - restructuring …
+   // 2. Spread - object/array literals  
   
   
   
