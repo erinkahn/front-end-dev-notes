@@ -20,8 +20,4 @@
 
 // Move to the beginning of a word: option+left
 
-// Save a file: command+s
-
-// Select all: command+a
-
 // Open an in-editor terminal: ctrl+`
