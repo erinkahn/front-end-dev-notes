@@ -39,10 +39,14 @@ let cookTheBeans = (isSoftened) => {
 
 // 4. async / await function
 const makeBeans = async () => {
-  let type = await shopForBeans();
-  let isSoft = await soakTheBeans(type);
-  let dinner = await cookTheBeans(isSoft);
-  console.log(dinner)
+	try {
+		let type = await shopForBeans();
+		let isSoft = await soakTheBeans(type);
+		let dinner = await cookTheBeans(isSoft);
+		console.log(dinner)
+	} catch(err) {
+		console.log(err)
+	}
 }
 
 // 5. call it
