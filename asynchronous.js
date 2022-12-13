@@ -28,6 +28,7 @@
 // promises & async/await patterns
     // help improve code syntax & complexity of callback functions/asynchronous actions
     // but still add a layer of complexity to the code
+    // make sure you have a try and catch statement for error handling for debugging
 
 
 // synchronous OR asynchronous?
@@ -74,10 +75,12 @@ useAsync();
 
     // 2b. USE THIS: async/await version:
     async function announceDinner() {
-      // Write your code below:
-      let dinnerChoice = await nativePromiseDinner();
-      console.log(dinnerChoice)
-
+      try {
+          let dinnerChoice = await nativePromiseDinner();
+          console.log(dinnerChoice)
+      } catch (err) {
+          console.log(err)
+      }
     }
 
     // 3. call the function
@@ -112,8 +115,12 @@ useAsync();
     }
     // or
     async function asyncFunction() {
-        let resolvedVal = await myPromise();
-        console.log(resolvedVal)
+        try {
+            let resolvedVal = await myPromise();
+             console.log(resolvedVal)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     // call it
