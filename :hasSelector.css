@@ -1,0 +1,28 @@
+// -------------------- //
+//   the :has selector
+// -------------------- //
+
+// select all the p's inside of the class .box
+.box:has(p) {
+  color: pink;
+}
+
+// select the p tag with the class of .p1 inside of the class .box
+.box:has(p.p1) {
+  color: red;
+}
+
+// select only the direct child p's of the class .box
+.box:has(> p) {
+  color: blue; 
+}
+
+// select only the .box that has a div inside of it and then select all the p tags in the div
+.box:has(div) p {
+  color: purple; 
+}
+
+// if body has an input of the class of checkbox and if that checkbox is checked, change the bkg color of the body
+body:has(.checkbox:checked) {
+  background: #333;
+}
