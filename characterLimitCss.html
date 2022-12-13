@@ -27,7 +27,7 @@
   <style>
     
     .cutoff-text {
-      --max-lines: 5; // limit to 5 lines
+      --max-lines: 5; /* limit to 5 lines */
       --line-height 1.4;
       
       max-height: calc(var(--max-lines) * 1em * var(--line-height)); // calculates the height 
@@ -43,12 +43,12 @@
       height: calc(1em * var(--line-height));
       width: 100%;
       bottom: 0;
-      pointer-events: none; // makes hidden lines not focusable by cursor
+      pointer-events: none; /* makes hidden lines not focusable by cursor */
       background: linear-gradient(to bottom, transparent, white);
     }
     
     .expand-btn {
-      appearance: none; //remove checkbox
+      appearance: none; /* remove checkbox */
       border: 1px solid black;
       padding: 0.5em;
       border-radius: 0.25em;
@@ -64,11 +64,11 @@
       content: 'Expand';
     }
     
-    .expand-btn:checked::before { // if any box is 'checked' change to 'Collapse'
+    .expand-btn:checked::before { /* if any box is 'checked' change to 'Collapse' */
       content: 'Collapse';
     }
     
-    .cutoff-text:has(+ .expand-btn:checked) { // if cutoff text has direct child of expand-btn and if it's checked...show cutoff text
+    .cutoff-text:has(+ .expand-btn:checked) { /* if cutoff text has direct child of expand-btn and if it's checked...show cutoff text */
       max-height: none;
     }
     
