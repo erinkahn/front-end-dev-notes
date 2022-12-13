@@ -132,9 +132,11 @@ useAsync();
     
 
 
-// Example 3: 
+// Example 3: (use this if you need consecurive promises to return / wait to execute until the previous promise resolves...otherwise use Promise.All() like in example 4)
 
     // You can handle independent promises all at once/simultaneously (concurrency)
+    // instead of using await before each promise below, since we aren't waiting for one to return before the other, they can just execute concurrently
+    // so just use Promise.all() like in example 4
 
     async function serveDinner() {
      const vegetablePromise = steamBroccoli();
