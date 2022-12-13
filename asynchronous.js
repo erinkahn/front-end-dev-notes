@@ -43,7 +43,7 @@ const useAsync = async () => {
 useAsync();
 
 
-// Example:
+// Example 1:
 
     // 1.promise function
     const brainstormDinner = () => {
@@ -93,4 +93,35 @@ useAsync();
         //     I'm going to make beans for dinner.
 
 
+
+// Example 2:
+
+    // return a promise that resolves a string after 1 second of delay
+    let myPromise = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout = () => {
+                resolve('I resolved');
+            }, 1000);
+        })
+    }
+    
+    // write 2 async functions that invoke myPromise();
+    let asyncFun = async () => {
+        let resolvedVal = await myPromise();
+        console.log(resolvedVal)
+    }
+    // or
+    asyncun function asyncF() {
+        let resolvedVal = await myPromise();
+        console.log(resolvedVal)
+    }
+
+    // call it
+    asyncFun();
+    
+    
+    
+    
+    
+    
     
