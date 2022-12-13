@@ -1,4 +1,4 @@
-//3 promise functions
+// 3 promise functions and 1 async/await function to return the promises
 
 // 1: returns bean type
 const shopForBeans = () => {
