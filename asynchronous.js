@@ -131,7 +131,7 @@ useAsync();
     
 
 
-// Example 3: You can handle independent promises all at once
+// Example 3: You can handle independent promises all at once/simultaneously (concurrency)
     async function serveDinner() {
      const vegetablePromise = steamBroccoli();
      const starchPromise = cookRice();
@@ -144,5 +144,14 @@ useAsync();
 
     
     
+// Example 4: Promise.all()
+    async function asyncPromAll() {
+      const resultArray = await Promise.all([asyncTask1(), asyncTask2(), asyncTask3(), asyncTask4()]);
+      for (let i = 0; i<resultArray.length; i++){
+        console.log(resultArray[i]); 
+      }
+    }
     
-    
+
+
+
