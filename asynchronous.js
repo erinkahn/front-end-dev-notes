@@ -132,7 +132,10 @@ useAsync();
     
 
 
-// Example 3: You can handle independent promises all at once/simultaneously (concurrency)
+// Example 3: 
+
+    // You can handle independent promises all at once/simultaneously (concurrency)
+
     async function serveDinner() {
      const vegetablePromise = steamBroccoli();
      const starchPromise = cookRice();
