@@ -120,6 +120,7 @@ useAsync();
     asyncFunction();
     
     // note: if you leave out the await, then the function is NOT paused and it will log out the value BEFORE the promise is resolved
+    // especially if you have a timeout, it may return your value before the timeout has finished and you could get an undefined value or see something like [object Promise]
     
     
     
