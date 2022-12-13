@@ -52,4 +52,15 @@ label:has(+ input:invalid)::before {
 // select the class of .p1 OR the id of #p2 OR button if it's inside the class .box
 .box:has(.p1, #p2, button) {
   background: coral;
-} // if you try to override this it wont work because of specificity and there is an ID which takes precedence
+} 
+
+// if you try to override this it wont work because of specificity and there is an ID which takes presedence
+.box.p1 {
+  background: red; // wont work because there was na ID of #p2 styled above which takes presedence cuz it's an ID
+}
+
+// && operator is used by using multiple :has() operators chained together:
+// select the box that has an id of p2 AND a div inside of it
+.box:has(#p2):has(div) {
+  background-color: gray;
+}
