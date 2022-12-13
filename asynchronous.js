@@ -106,19 +106,20 @@ useAsync();
     }
     
     // write 2 async functions that invoke myPromise();
-    let asyncFun = async () => {
+    let asyncFunction = async () => {
         let resolvedVal = await myPromise();
         console.log(resolvedVal)
     }
     // or
-    asyncun function asyncF() {
+    async function asyncFunction() {
         let resolvedVal = await myPromise();
         console.log(resolvedVal)
     }
 
     // call it
-    asyncFun();
+    asyncFunction();
     
+    // note: if you leave out the await, then the function is NOT paused and it will log out the value BEFORE the promise is resolved
     
     
     
