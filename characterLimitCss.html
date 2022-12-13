@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <title>Title of your page here</title>
+  </head>
+  
+  <body>
+    <card>
+      <h2>Title</h2>
+      <p class="cutoff-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique ligula quis tortor vulputate lacinia quis in ex. Nulla quis nibh tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum id tortor a tincidunt. Vestibulum eget pretium lacus. Quisque facilisis, ipsum ut vehicula blandit, sapien dolor sollicitudin quam, non accumsan diam arcu id tortor. Donec et venenatis dolor, sed aliquam ante. Nunc vitae ante tincidunt, dapibus ex ac, ornare risus. Praesent massa libero, feugiat tempor nisl quis, ornare suscipit ex. Quisque dignissim pharetra nibh ut interdum. Nunc in sodales nisi. Donec aliquet volutpat erat.</p>
+      <input class="expand-btn" type="checkbox"/>
+    </card>
+    
+    <card>
+      <h2>Title</h2>
+      <p class="cutoff-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique ligula quis tortor vulputate lacinia quis in ex. Nulla quis nibh tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum id tortor a tincidunt. Vestibulum eget pretium lacus. Quisque facilisis, ipsum ut vehicula blandit, sapien dolor sollicitudin quam, non accumsan diam arcu id tortor. Donec et venenatis dolor, sed aliquam ante. Nunc vitae ante tincidunt, dapibus ex ac, ornare risus. Praesent massa libero, feugiat tempor nisl quis, ornare suscipit ex. Quisque dignissim pharetra nibh ut interdum. Nunc in sodales nisi. Donec aliquet volutpat erat.</p>
+      <input class="expand-btn" type="checkbox"/>
+    </card>
+    
+    <card>
+      <h2>Title</h2>
+      <p class="cutoff-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique ligula quis tortor vulputate lacinia quis in ex. Nulla quis nibh tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent bibendum id tortor a tincidunt. Vestibulum eget pretium lacus. Quisque facilisis, ipsum ut vehicula blandit, sapien dolor sollicitudin quam, non accumsan diam arcu id tortor. Donec et venenatis dolor, sed aliquam ante. Nunc vitae ante tincidunt, dapibus ex ac, ornare risus. Praesent massa libero, feugiat tempor nisl quis, ornare suscipit ex. Quisque dignissim pharetra nibh ut interdum. Nunc in sodales nisi. Donec aliquet volutpat erat.</p>
+      <input class="expand-btn" type="checkbox"/>
+    </card>
+  </body>
+  
+  
+  <style>
+    
+    .cutoff-text {
+      --max-lines: 5; // limit to 5 lines
+      --line-height 1.4;
+      
+      max-height: calc(var(--max-lines) * 1em * var(--line-height)); // calculates the height 
+      line-height: var(--line-height);
+      
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .cutoff-text:has(+ .expand-btn:not(:checked))::before { // fade effect where text cuts off only when expand btn is NOT checked
+      content: "";
+      position: absolute;
+      height: calc(1em * var(--line-height));
+      width: 100%;
+      bottom: 0;
+      pointer-events: none; // makes hidden lines not focusable by cursor
+      background: linear-gradient(to bottom, transparent, white);
+    }
+    
+    .expand-btn {
+      appearance: none; //remove checkbox
+      border: 1px solid black;
+      padding: 0.5em;
+      border-radius: 0.25em;
+      cursor: pointer;
+      margin-top: 1rem;
+    } 
+    
+    .expand-btn:hover {
+      background-color: #ccc;
+    }
+    
+    .expand-btn::before {
+      content: 'Expand';
+    }
+    
+    .expand-btn:checked::before { // if any box is 'checked' change to 'Collapse'
+      content: 'Collapse';
+    }
+    
+    .cutoff-text:has(+ .expand-btn:checked) { // if cutoff text has direct child of expand-btn and if it's checked...show cutoff text
+      max-height: none;
+    }
+    
+  </style>
+  
+</html>
