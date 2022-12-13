@@ -30,14 +30,14 @@
       --max-lines: 5; /* limit to 5 lines */
       --line-height 1.4;
       
-      max-height: calc(var(--max-lines) * 1em * var(--line-height)); // calculates the height 
+      max-height: calc(var(--max-lines) * 1em * var(--line-height)); /* calculates the height  */
       line-height: var(--line-height);
       
       overflow: hidden;
       position: relative;
     }
     
-    .cutoff-text:has(+ .expand-btn:not(:checked))::before { // fade effect where text cuts off only when expand btn is NOT checked
+    .cutoff-text:has(+ .expand-btn:not(:checked))::before { /* fade effect where text cuts off only when expand btn is NOT checked */
       content: "";
       position: absolute;
       height: calc(1em * var(--line-height));
