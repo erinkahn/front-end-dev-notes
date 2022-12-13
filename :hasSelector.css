@@ -1,6 +1,6 @@
-// -------------------- //
+// --------------------
 //   the :has selector
-// -------------------- //
+// -------------------- 
 
 // select all the p's inside of the class .box
 .box:has(p) {
@@ -26,3 +26,26 @@
 body:has(.checkbox:checked) {
   background: #333;
 }
+
+// check if my label has a direct sibling that is a valid input (based on your html attribute)
+label:has(+ input:valid) {
+  color: green;
+}
+
+// check if my label has a direct sibling that is a invalid input (based on your html attribute)
+label:has(+ input:invalid) {
+  color: red;
+}
+
+// check if my label has a direct sibling that is a valid input and give it a checkmark before
+label:has(+ input:valid)::before {
+  content: "\2713";
+  margin-right: .25em;
+}
+
+// check if my label has a direct sibling that is a invalid input and give it an X before
+label:has(+ input:invalid)::before {
+  content: "X";
+  margin-right: .25em;
+}
+
