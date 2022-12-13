@@ -29,6 +29,7 @@
     // help improve code syntax & complexity of callback functions/asynchronous actions
     // but still add a layer of complexity to the code
     // make sure you have a try and catch statement for error handling for debugging
+    // Promise.all() is great for doing multiple tasks concurrently. It fails fast and wont wait for the rest of the tasks to complete once any of them has rejected
 
 
 // synchronous OR asynchronous?
@@ -145,6 +146,11 @@ useAsync();
     
     
 // Example 4: Promise.all()
+
+    // Promise.all() has the benefit of failing fast, meaning it won’t wait for the rest of the asynchronous actions to complete once any one has rejected. 
+    // As soon as the first promise in the array rejects, the promise returned from Promise.all() will reject with that reason. 
+    // As it was when working with native promises, Promise.all() is a good choice if multiple asynchronous tasks are all required, but none must wait for any other before executing.
+
     async function asyncPromAll() {
       const resultArray = await Promise.all([asyncTask1(), asyncTask2(), asyncTask3(), asyncTask4()]);
       for (let i = 0; i<resultArray.length; i++){
