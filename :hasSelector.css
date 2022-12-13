@@ -49,3 +49,7 @@ label:has(+ input:invalid)::before {
   margin-right: .25em;
 }
 
+// select the class of .p1 OR the id of #p2 OR button if it's inside the class .box
+.box:has(.p1, #p2, button) {
+  background: coral;
+} // if you try to override this it wont work because of specificity and there is an ID which takes precedence
