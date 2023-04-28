@@ -1,0 +1,13 @@
+// dynamic cascade animation loop
+$nums: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+
+@each $num in $nums{
+    .fade-in-up:nth-of-type(#{$num}) {
+        -webkit-transition-delay: $num * 0.2s;
+        transition-delay: $num * 0.2s - 0.2s;
+    }
+    .fade-out-down:nth-of-type(#{$num}) {
+        -webkit-transition-delay: $num * 0.2s;
+        transition-delay: $num * 0.2s - 0.2s;
+    }
+}
